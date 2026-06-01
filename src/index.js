@@ -4,7 +4,7 @@ import { Readable } from "node:stream";
 
 const TARGET_BASE        = (process.env.TARGET_DOMAIN      || "").replace(/\/$/, "");
 const PUBLIC_RELAY_PATH  = normalizeRelayPath(process.env.PUBLIC_RELAY_PATH || "/api");
-const RELAY_PATH         = normalizeRelayPath(process.env.RELAY_PATH        || "/api");
+const RELAY_PATH         = normalizeRelayPath(process.env.RELAY_PATH        || "/");
 const RELAY_KEY          = (process.env.RELAY_KEY          || "").trim();
 const UPSTREAM_TIMEOUT_MS = parsePositiveInt(process.env.UPSTREAM_TIMEOUT_MS, 0, 1000);
 const MAX_INFLIGHT       = parsePositiveInt(process.env.MAX_INFLIGHT, 512, 1);
